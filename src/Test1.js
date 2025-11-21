@@ -447,6 +447,9 @@ function Test1() {
                   <h3 className="question-text">{question.stem}</h3>
                   <p><strong>Type:</strong> {question.type.replace(/_/g, ' ')}</p>
                   <p><strong>Points:</strong> {question.points}</p>
+                  
+                  <p className="translation">{question.stem_arabic}</p>
+                  <p className="translation">{question.stem_english}</p>
                   {isMultiSelect && index < 2 && <p style={{ color: '#3498db', fontWeight: 'bold' }}>📌 Select TWO correct answers:</p>}
                   {question.options && (
                     <div className="options-container">

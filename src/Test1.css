@@ -189,6 +189,15 @@
     z-index: 998;
     cursor: pointer;
 }
+.translation{
+    font-size: 1rem;
+    color: #16a085;
+    margin-top: 15px;
+    font-weight: 600;
+    border: 1px solid #16a085;
+    border-radius: 5px;
+    text-align: center;
+}
 .pagination-info {
     color: #2c3e50;
     font-weight: 600;
