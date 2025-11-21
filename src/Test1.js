@@ -402,6 +402,7 @@ function Test1() {
         {quizData.reading_comprehension_passage && (
           <p
             className="paragraph"
+
             onClick={(e) => {
               // Safely adjust styles when the paragraph is clicked
               const el = e.currentTarget;
