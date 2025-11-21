@@ -204,6 +204,20 @@ museums — it is alive in the hearts of its people.`,
     },
     {
       "id": 22,
+      "type": "short_answer",
+      "category": "The Novel 'The old man and the sea'",
+      "stem": "What constitutes faith?",
+      "points": 2
+    },
+    {
+      "id": 23,
+      "type": "short_answer",
+      "category": "The Novel 'The old man and the sea'",
+      "stem": "What is monotheism?",
+      "points": 2
+    },
+    {
+      "id": 24,
       "type": "reading_comprehension",
       "passage_reference": "Paragraph 1-3",
       "stem": "What is the main idea of the passage?",
@@ -212,7 +226,7 @@ museums — it is alive in the hearts of its people.`,
       "points": 1
     },
     {
-      "id": 23,
+      "id": 25,
       "type": "reading_comprehension",
       "passage_reference": "Paragraph 3",
       "stem": "What is the writer’s opinion about Egypt’s heritage?",
@@ -221,7 +235,7 @@ museums — it is alive in the hearts of its people.`,
       "points": 1
     },
     {
-      "id": 24,
+      "id": 26,
       "type": "reading_comprehension",
       "passage_reference": "Inference",
       "stem": "What can you infer from the passage?",
@@ -230,7 +244,7 @@ museums — it is alive in the hearts of its people.`,
       "points": 1
     },
     {
-      "id": 25,
+      "id": 27,
       "type": "reading_comprehension",
       "passage_reference": "Paragraph 2 (Vocabulary)",
       "stem": "The word “hospitality” in paragraph 2 is closest in meaning to............................",
@@ -239,7 +253,7 @@ museums — it is alive in the hearts of its people.`,
       "points": 1
     },
     {
-      "id": 26,
+      "id": 28,
       "type": "reading_comprehension",
       "passage_reference": "Paragraph 2 (Detail)",
       "stem": "According to the passage, what gives Egyptian festivals special value?",
@@ -248,7 +262,7 @@ museums — it is alive in the hearts of its people.`,
       "points": 1
     },
     {
-      "id": 27,
+      "id": 29,
       "type": "reading_comprehension",
       "passage_reference": "Vocabulary",
       "stem": "What is the opposite of “ancient” as used in the passage?",
@@ -257,7 +271,7 @@ museums — it is alive in the hearts of its people.`,
       "points": 1
     },
     {
-      "id": 28,
+      "id": 30,
       "type": "reading_comprehension",
       "passage_reference": "Paragraph 3 (Detail)",
       "stem": "What does the writer suggest about learning history?",
@@ -266,7 +280,7 @@ museums — it is alive in the hearts of its people.`,
       "points": 1
     },
     {
-      "id": 29,
+      "id": 31,
       "type": "translation_arabic_to_english",
       "stem_arabic": "ساعد المتطوعون في تنظيف الشوارع ألنهم يؤمنون أن الأفعال الصغيرة تصنع فارقًا كبيرًا.",
       "options": ["Volunteers helped clean the streets because they believe small actions make a big difference.", "Volunteers helped clean the streets because they trust small actions make a big change.", "Volunteers clean up the streets since they believe small actions do a big difference.", "Volunteers help cleaning up the streets since they trust little actions make a big difference."],
@@ -274,7 +288,7 @@ museums — it is alive in the hearts of its people.`,
       "points": 1
     },
     {
-      "id": 30,
+      "id": 32,
       "type": "translation_english_to_arabic",
       "stem_english": "A single lie can destroy years of trust, while one honest word can rebuild it again.",
       "options": ["الكذبة الواحدة يمكن أن تبني سنوات من الثقة ، بينما كلمة صادقة واحدة يمكن أن تدمر بناءها.", "الكلمة الواحدة يمكن أن تدمر سنوات من الحقيقة ، بينما كلمة صادقة واحدة يمكن أن تعيد بناءها.", "الكذبة الواحدة يمكن أن تدمر سنوات من الثقة ، بينما كلمة صادقة واحدة يمكن أن تعيد بناءها.", "الكذبة الواحدة يمكن أن تدمر سنوات من الثقة ، بينما كلمة صادقة واحدة ال يمكن أن تعيد بناءها."],
@@ -385,6 +399,7 @@ function Test1() {
     }, [timeRemaining]);
     return (
         <>
+        {quizData.reading_comprehension_passage && (
           <p
             className="paragraph"
             onClick={(e) => {
@@ -394,17 +409,16 @@ function Test1() {
                 el.style.width = '50px';
                 el.style.height = '50px';
                 el.style.borderRadius = '50%';
-              }else{
+              } else {
                 el.style.width = '100%';
-                el.style.height='fit-content';
+                el.style.height = 'fit-content';
                 el.style.borderRadius = '5px';
-                
               }
             }}
-            
           >
             {quizData.reading_comprehension_passage}
           </p>
+        )}
           <div className="progress-bar">
             <div className="progress-fill" style={{ width: `${(Object.keys(selectedAnswers).length / quizData.questions.length) * 100}%` }}></div>
           </div>
